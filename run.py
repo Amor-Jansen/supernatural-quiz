@@ -33,4 +33,11 @@ def player_name():
 
         name = input("Please enter your name: \n")
 
-        if 
+        if check_name(name):
+            print("\n")
+            print(f"{name} lets see how well you know the series.\n")
+            print("This is a multiple choice game.")
+            print("You will type A, B, C or D.\n")
+            print("Have fun!!/n")
+            data = game.play_game()
+            update_score_worksheet(data, name, datetime_string)
