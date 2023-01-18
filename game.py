@@ -1,7 +1,4 @@
-def game_data():[
-    """
-    This contains all the questions and answers
-    """
+game_data = [
     {"question": "Who are the main two characters?",
      "answers": {"A": "Mike and Ike",
                  "B": "Sam and Dean",
@@ -12,7 +9,7 @@ def game_data():[
                  "B": "Accounting",
                  "C": "Business"},
      "correct_answer": "A"},
-    {"question": "In the episode “The Slice Girls” what was Deans Daughters name?",
+    {"question": "In the episode “The Slice Girls”\n what was Deans Daughters name?",
      "answers": {"A": "Emma",
                  "B": "Amanda",
                  "C": "Jenny"},
@@ -27,7 +24,7 @@ def game_data():[
                  "B": "An IPod jack",
                  "C": "A drink holder"},
      "correct_answer": "B"},
-    {"question": "When the apocalypse starts who is the first horseman they face?",
+    {"question": "When the apocalypse starts who \n is the first horseman they face?",
      "answers": {"A": "Death",
                  "B": "Famine",
                  "C": "War"},
@@ -77,12 +74,12 @@ def game_data():[
                  "B": "Azreal, Rheagon, Damrus, Asphodel",
                  "C": "Azazel, Ramiel, Dagon, Asmodeus"},
      "correct_answer": "C"},
-    {"question": "What was the first “thing” the boys faced in the “Pilot” episode?",
+    {"question": "What was the first “thing” \n the boys faced in the “Pilot” episode?",
      "answers": {"A": "A Wendigo",
                  "B": "Woman in white",
                  "C": "A Trickster"},
      "correct_answer": "B"},
-    {"question": "In the episode “in the beginning” what year is Dean sent to?",
+    {"question": "In the episode “in the beginning” \n what year is Dean sent to?",
      "answers": {"A": "1969",
                  "B": "1943",
                  "C": "1973"},
@@ -103,3 +100,4 @@ def game_data():[
                  "C": "Golum"},
      "correct_answer": "B"},
     ]
+    
