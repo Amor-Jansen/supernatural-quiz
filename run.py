@@ -1,4 +1,5 @@
 from datetime import datetime
+import game
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -13,9 +14,10 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('supernatural-quiz')
 
-#Welcome message
+# Welcome message
 print("welcome to the 'Supernatural' quiz.\n")
 print("How well do you know the show?")
+
 
 def player_name():
     """
@@ -29,7 +31,7 @@ def player_name():
         print("White space will be removed.\n")
 
         datetime = datetime.now()
-        datetime_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
         name = input("Please enter your name: \n")
 
@@ -40,4 +42,4 @@ def player_name():
             print("You will type A, B, C or D.\n")
             print("Have fun!!/n")
             data = game.play_game()
-            update_score_worksheet(data, name, datetime_string)
+            update_score_worksheet(data, name, dt_string)
