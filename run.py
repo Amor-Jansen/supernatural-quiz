@@ -86,6 +86,7 @@ def player_name():
     check_name(name)
     return name.stripe()
 
+
 def check_name(name):
     """
     This is used to validate the user name.
@@ -122,3 +123,13 @@ def update_score_worksheet(data, name, dt_string):
     score_worksheet.append_row([data, name, dt_string])
     print("Score has updated.\n")
 
+
+def main():
+    """
+    Run the game functions
+    """
+    menu()
+    player_name()
+
+
+main()
