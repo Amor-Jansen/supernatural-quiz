@@ -8,10 +8,11 @@ def play_game():
     score = 0
 
     while True:
+        # Question 1
         print("Who are the main two characters?")
         answer1 = input("A. Mike and Ike \nB. Sam and Dean \nC. Lou and Moe \nAnswer: \n").strip()
         if answer1.upper() == "B":
-            print("Correct!\n")
+            print("Yes!\n")
             score += 1
             break
         elif answer1.upper() == "A" or answer1.upper() == "C":
@@ -20,6 +21,31 @@ def play_game():
         else:
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 
+        # Question 2
+        print("")
+        answer1 = input("A.  \nB.  \nC.  \nAnswer: \n").strip()
+        if answer1.upper() == "":
+            print("Yes!\n")
+            score += 1
+            break
+        elif answer1.upper() == "" or answer1.upper() == "":
+            print("Oops!\n")
+            break
+        else:
+            print("Invalid input!! Please use 'A' 'B' or 'C'\n")
+
+        # Question 3
+        print("")
+        answer1 = input("A.  \nB.  \nC.  \nAnswer: \n").strip()
+        if answer1.upper() == "":
+            print("Yes!\n")
+            score += 1
+            break
+        elif answer1.upper() == "" or answer1.upper() == "":
+            print("Oops!\n")
+            break
+        else:
+            print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 game_data = [
     {"question": "What was Sam studying in Stanford?",
      "answers": {"A": "Law",
