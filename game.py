@@ -48,17 +48,36 @@ def play_game():
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 
         # Question 4
+        print("In the episode “Yellow Fever” what happened to Dean?")
+        answer1 = input("A. He gets shot \nB. He gets stabbed \nC. He gets haunted \nAnswer: \n").strip()
+        if answer1.upper() == "C":
+            print("Yes!\n")
+            score += 1
+            break
+        elif answer1.upper() == "B" or answer1.upper() == "A":
+            print("Oops!\n")
+            break
+        else:
+            print("Invalid input!! Please use 'A' 'B' or 'C'\n")
+
+        # Question 5
+        print("What does Sam add to Deans car?")
+        answer1 = input("A. A new radio \nB. An IPod jack \nC. A drink holder \nAnswer: \n").strip()
+        if answer1.upper() == "B":
+            print("Yes!\n")
+            score += 1
+            break
+        elif answer1.upper() == "C" or answer1.upper() == "A":
+            print("Oops!\n")
+            break
+        else:
+            print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 game_data = [
 
-    {"question": "In the episode “Yellow Fever” what happened to Dean?",
-     "answers": {"A": "He gets shot",
-                 "B": "He gets stabbed",
-                 "C": "He gets haunted"},
-     "correct_answer": "C"},
-    {"question": "What does Sam add to Deans car?",
-     "answers": {"A": "A new radio",
-                 "B": "An IPod jack",
-                 "C": "A drink holder"},
+    {"question": "",
+     "answers": {"A": "",
+                 "B": "",
+                 "C": ""},
      "correct_answer": "B"},
     {"question": "When the apocalypse starts who \n is the first horseman they face?",
      "answers": {"A": "Death",

@@ -148,7 +148,6 @@ def display_top_5_scores():
         print(str(line+1) + str(sorted_data[line]))
 
 
-
 def main():
     """
     Run the game functions
