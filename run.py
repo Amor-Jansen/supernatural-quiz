@@ -12,3 +12,17 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('supernatural-quiz')
+
+# Welcome Message
+
+print("Welcome to the 'Supernatural' quiz.")
+print("How well do you know the show?")
+print("""
+      /`\
+.----/---\----.
+ `'./     \.'`
+   /`'.'.'`\
+  /,-`   `-,\
+  `         `  
+""")
+
