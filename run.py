@@ -71,3 +71,15 @@ def player_name():
         # dd/mm/YY H:M:S
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
+        name = input("What is your name: \n")
+
+        if check_name(name):
+            print("\n")
+            print(f"Welcome {name}, lets start.")
+            print("This is a multiple choice. \n")
+            print("Select A, B or C.\n")
+            print("Good Luck!")
+            data = game.play_game()
+
+
+
