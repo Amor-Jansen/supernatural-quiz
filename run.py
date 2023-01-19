@@ -116,6 +116,19 @@ def update_score_worksheet(data, name, dt_string):
     print("Score has updated.\n")
 
 
+def game_restart():
+    """
+    Allow the player to play again.
+    """
+    while True:
+        data = game.play_game()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        score_worksheet = SHEET.worksheet('score')
+        score_worksheet.append_row([data, " ", dt_string])
+        menu()
+
+
 def display_top_5_scores():
     """
     Display the top 5 scores.
