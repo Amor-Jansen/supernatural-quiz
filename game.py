@@ -34,7 +34,7 @@ game_data = [
                  "B": "Six",
                  "C": "One"},
      "correct_answer": "A"},
-    {"question": "What are Crowley’s nick names for the boys?",
+    {"question": "What are Crowley`s nick names for the boys?",
      "answers": {"A": "Shaggy and Scooby",
                  "B": "Moose and Squirrel",
                  "C": "Mouse and Elephant"},
@@ -100,7 +100,7 @@ game_data = [
                  "C": "Golum"},
      "correct_answer": "B"},
     ]
-    
+
 
 def count_keys(game_data):
     """
