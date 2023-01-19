@@ -26,3 +26,33 @@ print("""
   `         `  
 """)
 
+
+def menu():
+    """
+    Instructions on what options a player has.
+    Play game, exit or scoreboard.
+    """
+    print("\n")
+    print("Press 'y' to play. \n")
+    print("Press 'n' to exit. \n")
+    print("Press 's' for scoreboard. \n")
+
+    while True:
+        game_choices = input("What would you like to do? \n").sripe()
+        print("\n")
+
+        if game_choices == "y":
+            print("Lets roll!\n")
+            break
+        elif game_choices == "n":
+            print("Goodbye!")
+            quit()
+        elif game_choices == "s":
+            display_top_scores()
+            menu()
+        else:
+            print("Please select an option: 'y', 'n' or 's'.")
+
+
+def player_name():
+
