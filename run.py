@@ -18,14 +18,6 @@ SHEET = GSPREAD_CLIENT.open('supernatural-quiz')
 
 print("Welcome to the 'Supernatural' quiz.")
 print("How well do you know the show?")
-print("""
-      /`\
-.----/---\----.
- `'./     \.'`
-   /`'.'.'`\
-  /,-`   `-,\
-  `         `  
-""")
 
 
 def menu():
