@@ -55,4 +55,14 @@ def menu():
 
 
 def player_name():
+    """
+    Request a name from the player.
+    Must be a valid input to work.
+    """
+    while True:
+        print("Please enter your name.\n")
+        print("Must contain A-Z or a-z/n")
+        print("Max 8 characters.\n")
+        print("White space will be taken out.\n")
 
+        
