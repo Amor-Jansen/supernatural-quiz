@@ -22,41 +22,34 @@ def play_game():
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 
         # Question 2
-        print("")
-        answer1 = input("A.  \nB.  \nC.  \nAnswer: \n").strip()
-        if answer1.upper() == "":
+        print("What was Sam studying in Stanford?")
+        answer1 = input("A. Law \nB. Accounting \nC. Business \nAnswer: \n").strip()
+        if answer1.upper() == "A":
             print("Yes!\n")
             score += 1
             break
-        elif answer1.upper() == "" or answer1.upper() == "":
+        elif answer1.upper() == "B" or answer1.upper() == "C":
             print("Oops!\n")
             break
         else:
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 
         # Question 3
-        print("")
-        answer1 = input("A.  \nB.  \nC.  \nAnswer: \n").strip()
-        if answer1.upper() == "":
+        print("In the episode “The Slice Girls”\n what was Deans Daughters name?")
+        answer1 = input("A. Emma \nB. Amanda \nC. Jenny \nAnswer: \n").strip()
+        if answer1.upper() == "A":
             print("Yes!\n")
             score += 1
             break
-        elif answer1.upper() == "" or answer1.upper() == "":
+        elif answer1.upper() == "B" or answer1.upper() == "C":
             print("Oops!\n")
             break
         else:
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
+
+        # Question 4
 game_data = [
-    {"question": "What was Sam studying in Stanford?",
-     "answers": {"A": "Law",
-                 "B": "Accounting",
-                 "C": "Business"},
-     "correct_answer": "A"},
-    {"question": "In the episode “The Slice Girls”\n what was Deans Daughters name?",
-     "answers": {"A": "Emma",
-                 "B": "Amanda",
-                 "C": "Jenny"},
-     "correct_answer": "A"},
+
     {"question": "In the episode “Yellow Fever” what happened to Dean?",
      "answers": {"A": "He gets shot",
                  "B": "He gets stabbed",
