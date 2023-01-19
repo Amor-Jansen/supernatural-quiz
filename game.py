@@ -73,12 +73,6 @@ def play_game():
         else:
             print("Invalid input!! Please use 'A' 'B' or 'C'\n")
 game_data = [
-
-    {"question": "",
-     "answers": {"A": "",
-                 "B": "",
-                 "C": ""},
-     "correct_answer": "B"},
     {"question": "When the apocalypse starts who \n is the first horseman they face?",
      "answers": {"A": "Death",
                  "B": "Famine",
@@ -154,19 +148,4 @@ game_data = [
                  "B": "Hermione Granger",
                  "C": "Golum"},
      "correct_answer": "B"},
-    ]
-
-
-def count_keys(game_data):
-    """
-    This will counnt the number of questions and allow
-    more to be added or even taken away.
-    """
-    count = 0
-    for i in enumerate(game_data):
-        count += 1
-    return count
-
-
-num_of_questions = (count_keys(game_data))
-    
+]
