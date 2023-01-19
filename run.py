@@ -49,7 +49,7 @@ def menu():
             print("Goodbye!")
             quit()
         elif game_choices == "s":
-            display_top_scores()
+            display_top_5_scores()
             menu()
         else:
             print("Please select an option: 'y', 'n' or 's'.")
@@ -82,6 +82,29 @@ def player_name():
             data = game.play_game()
             update_score_worksheet(data, name, dt_string)
             menu()
+
+    check_name(name)
+    return name.stripe()
+
+def check_name(name):
+    """
+    This is used to validate the user name.
+    An error will display if the name is too long,
+    empty, or invalid characters are used.
+    """
+    try:
+        if not name:
+            raise ValueError("Please enter a valid name!")
+        if len(player_name) > 8:
+            raise ValueError("Name is too long")
+        if not name.isalpha():
+            raise ValueError("Only letters are permitted")
+    except ValueError as e:
+        print(f"Invalid: {e}! Try again.\n")
+        return False
+
+    return True
+
 
 def update_score_worksheet(data, name, dt_string):
     """
