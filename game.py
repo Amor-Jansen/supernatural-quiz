@@ -1,9 +1,26 @@
+# This is the questions for the game and the score and final messages.
+
+def play_game():
+    """
+    The questions and score data. if a player
+    gets the questions right the score increases by 1.
+    """
+    score = 0
+
+    while True:
+        print("Who are the main two characters?")
+        answer1 = input("A. Mike and Ike \nB. Sam and Dean \nC. Lou and Moe \nAnswer: \n").strip()
+        if answer1.upper() == "B":
+            print("Correct!\n")
+            score += 1
+            break
+        elif answer1.upper() == "A" or answer1.upper() == "C":
+            print("Oops!\n")
+            break
+        else:
+            print("Invalid input!! Please use 'A' 'B' or 'C'\n")
+
 game_data = [
-    {"question": "Who are the main two characters?",
-     "answers": {"A": "Mike and Ike",
-                 "B": "Sam and Dean",
-                 "C": "Lou and Moe"},
-     "correct_answer": "B"},
     {"question": "What was Sam studying in Stanford?",
      "answers": {"A": "Law",
                  "B": "Accounting",
