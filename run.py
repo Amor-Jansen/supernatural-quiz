@@ -1,4 +1,3 @@
-from datetime import datetime
 import gspread
 from google.oauth2.service_account import Credentials
 import game
@@ -19,27 +18,11 @@ print("welcome to the 'Supernatural' quiz.")
 print("How well do you know the show?")
 
 
-def player_name():
+def start_game(game_data):
     """
-    This will get the player name.
-    the request will only end when a valid name is chosen.
+    Displays welcome text and instructions as 
+    well as getting the users name.
     """
-    while True:
-        print("Choose a user name.\n")
-        print("Only characters a-z, A-Z and 0-9 are permitted.")
-        print("Maximun of 9 characters.")
-        print("White space will be removed.\n")
+    print("Welcome to the 'Supernatural' quiz")
+    print("How well do you know the show?")
 
-        #datetime = datetime.now()
-        #dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-
-        name = input("Please enter your name: \n")
-
-        if check_name(name):
-            print("\n")
-            print(f"{name} lets see how well you know the series.\n")
-            print("This is a multiple choice game.")
-            print("You will type A, B, C or D.\n")
-            print("Have fun!!/n")
-            data = game.play_game()
-            update_score_worksheet(data, name, dt_string)
