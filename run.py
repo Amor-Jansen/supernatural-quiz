@@ -80,6 +80,22 @@ def player_name():
             print("Select A, B or C.\n")
             print("Good Luck!")
             data = game.play_game()
+            update_score_worksheet(data, name, dt_string)
+            menu()
 
+def update_score_worksheet(data, name, dt_string):
+    """
+    Updates the score, name and date and time.
+    Entered into a google sheet.
+    """
+    print("Updating score...\n")
+    score_worksheet = SHEET.worksheet("score")
 
+    now = datetime.now()
+
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+    score_worksheet.append_row([data, name, dt_string])
+    print("Score has updated.\n")
 
