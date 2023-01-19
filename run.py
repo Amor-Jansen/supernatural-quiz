@@ -31,7 +31,7 @@ def menu():
     print("Press 's' for scoreboard. \n")
 
     while True:
-        game_choices = input("What would you like to do? \n").sripe()
+        game_choices = input("What would you like to do? \n")
         print("\n")
 
         if game_choices == "y":
@@ -88,7 +88,7 @@ def check_name(name):
     try:
         if not name:
             raise ValueError("Please enter a valid name!")
-        if len(player_name) > 8:
+        if len(name) > 8:
             raise ValueError("Name is too long")
         if not name.isalpha():
             raise ValueError("Only letters are permitted")
