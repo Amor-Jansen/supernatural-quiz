@@ -116,6 +116,26 @@ def update_score_worksheet(data, name, dt_string):
     print("Score has updated.\n")
 
 
+def display_top_5_scores():
+    """
+    Display the top 5 scores.
+    Data is fetched form google sheets via API.
+    """
+    records_score = SHEET.worksheet('score').get_all_values()[1:]
+
+    for data_set in records_score:
+        data_set[0] = int(data_set[0])
+
+    sorted_data = sorted(records_score, reverse=True)
+
+    print("Top 5 scores:")
+    print("Score \t Name \t Time")
+
+    for line in range(5):
+        print(str(line+1) + str(sorted_data[line]))
+
+
+
 def main():
     """
     Run the game functions
