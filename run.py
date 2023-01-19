@@ -1,3 +1,4 @@
+from datetime import datetime
 import gspread
 from google.oauth2.service_account import Credentials
 import game
@@ -65,4 +66,8 @@ def player_name():
         print("Max 8 characters.\n")
         print("White space will be taken out.\n")
 
-        
+        now = datetime.now()
+
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
